@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestordeTarefasApi</name>
+    </assembly>
+    <members>
+        <member name="T:GestordeTarefasApi.Controllers.ProjetosController">
+            <summary>
+            Controller Projetos.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.ProjetosController.GetProjetos">
+            <summary>
+            GET que retona todos os projetos.
+            </summary>    
+             
+            <returns>Lista de projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.ProjetosController.GetProjetosUsuario(System.Int32)">
+            <summary>
+            GET que retona todos os projetos do usuário.
+            </summary>       
+            
+             <param name="usuarioID">ID do Usuário</param>
+             
+            <returns>Lista de projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.ProjetosController.InserirProjetos(GestordeTarefasApi.Models.Projetos)">
+            <summary>
+            POST responsável criar um novo Projeto
+            </summary>
+            <param name="projetos">Model Projetos</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.ProjetosController.DeleteProjetos(System.Int32)">
+            <summary>
+            Responsável por excluir uma Projeto
+            </summary>
+            <param name="projetoID">ID do Projeto</param>
+            
+            <returns></returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Controllers.RelatoriosController">
+            <summary>
+            Controller Relatórios.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.RelatoriosController.GetRelatorioDesempenho(System.Int32)">
+            <summary>
+            GET que retona o Relatório de Desempenho.
+            </summary>    
+             
+            <returns>Lista de Desempenho</returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Controllers.TarefaController">
+            <summary>
+            Controller de Tarefas.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.GetTarefas">
+            <summary>
+            GET que retona todas as tarefas.
+            </summary>    
+             
+            <returns>Lista de tarefas</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.GetTarefasProjeto(System.Int32)">
+            <summary>
+            GET que retona todas as tarefas do projeto.
+            </summary>       
+            
+             <param name="projetoID">ID do Projeto</param>
+             
+            <returns>Lista de tarefas</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.InserirTarefas(GestordeTarefasApi.Models.Tarefas)">
+            <summary>
+            POST responsável criar uma nova Tarefa
+            </summary>
+            <param name="tarefas">Model Tarefas</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.PutTarefas(System.Int32,GestordeTarefasApi.Models.Tarefas)">
+            <summary>
+            PUT responsável criar uma nova Tarefa
+            </summary>
+            
+            <param name="usuarioID">Usuário realizando a alteração</param>
+            <param name="tarefas">Model Tarefas</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.DeleteTarefas(System.Int32)">
+            <summary>
+            Responsável por excluir uma Tarefa
+            </summary>
+            <param name="tarefaID">ID de Tarefas</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Controllers.TarefaController.AdicionaCometariosTarefa(GestordeTarefasApi.Models.ComentarioTarefa)">
+            <summary>
+            Responsável por adicionar um comentário a tarefa
+            </summary>
+            <param name="comentario">Model de ComentarioTarefa</param>
+            
+            <returns></returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Models.LogRepositorio">
+            <summary>
+            Classe de LogRepositorio.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.LogRepositorio.#ctor">
+            <summary>
+            Construtor LogRepositorio.
+            </summary>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.LogRepositorio.InsereLogTarefa(System.Int32,GestordeTarefasApi.Models.Tarefas)">
+            <summary>
+            Rotina responsável por inserir log da tarefa atualizada.
+            </summary>
+            
+            <param name="usuarioID">Id do Usuário</param>
+             <param name="tarefa">MOdel de Tarefa</param>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.LogRepositorio.InsereLogComentarioTarefa(GestordeTarefasApi.Models.ComentarioTarefa)">
+            <summary>
+            Rotina responsável por inserir log do comentario inserido na tarefa tarefa.
+            </summary>
+            
+            <param name="comentario">Model de ComentarioTarefa</param>
+             
+            <returns></returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Models.PrioridadesRepositorio">
+            <summary>
+            Classe de PrioridadesRepositorio.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.PrioridadesRepositorio.#ctor">
+            <summary>
+            Construtor PrioridadesRepositorio.
+            </summary>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.PrioridadesRepositorio.GetPrioridades(System.Int32)">
+             <summary>
+             Rotina responsável por retornar uma lista de tarefas do projeto.
+             </summary>
+            
+              <param name="id">ID de prioridades</param>
+              
+             <returns>Model de Prioridades</returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Models.ProjetosRepositorio">
+            <summary>
+            Classe de ProjetosRepositorio.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.#ctor">
+            <summary>
+            Construtor ProjetosRepositorio.
+            </summary>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.GetProjetos">
+            <summary>
+            Rotina responsável por retornar todas os Projetos do sistema.
+            </summary>
+             
+            <returns>Lista de Projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.GetProjetosUsuario(System.Int32)">
+            <summary>
+            Rotina responsável por retornar todas os Projetos por usuário.
+            </summary>
+            
+             <param name="usuarioID">ID do usuário</param>
+             
+            <returns>Lista de Projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.InserirProjetos(GestordeTarefasApi.Models.Projetos)">
+            <summary>
+            Rotina responsável por inserir um novo projeto.
+            </summary>
+            
+             <param name="projeto">Model de Projeto</param>
+             
+            <returns>Model RetornoMetodos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.GetProjetoID(System.Int32)">
+            <summary>
+            Rotina responsável por retornar o id do Projetos.
+            </summary>
+            
+             <param name="id">ID do projeto</param>
+             
+            <returns>Id de Projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.ProjetosRepositorio.Deletar(System.Int32)">
+            <summary>
+            Rotina responsável por retornar por deletar um Projeto.
+            </summary>
+            
+             <param name="projetoID">ID do projeto</param>
+             
+            <returns>Model RetornoMetodos</returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Models.StatusRepositorio">
+            <summary>
+            Classe de StatusRepositorio.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.StatusRepositorio.#ctor">
+            <summary>
+            Construtor StatusRepositorio.
+            </summary>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.StatusRepositorio.GetStatus(System.Int32)">
+             <summary>
+             Rotina responsável por retornar status.
+             </summary>
+            
+              <param name="statusId">ID de status</param>
+              
+             <returns>Model de Status</returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Models.TarefasRepositorio">
+            <summary>
+            Classe de TarefasRepositorio.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.#ctor">
+            <summary>
+            Construtor TarefasRepositorio.
+            </summary>
+             
+            <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.GetTarefas">
+            <summary>
+            Rotina responsável por retornar todas as tarefas do sistema.
+            </summary>
+             
+            <returns>Lista de Tarefas</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.GetTarefasProjeto(System.Int32)">
+             <summary>
+             Rotina responsável por retornar uma lista de tarefas do projeto.
+             </summary>
+            
+              <param name="projetoID">ID do projeto</param>
+              
+             <returns>Lista de Tarefas</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.InserirTarefas(GestordeTarefasApi.Models.Tarefas)">
+             <summary>
+             Rotina responsável por inserir uma nova Tarefa.
+             </summary>
+            
+              <param name="tarefa">MOdel de Tarefa</param>
+              
+             <returns>ID da nova Tarefa</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.AtualizaTarefas(System.Int32,GestordeTarefasApi.Models.Tarefas)">
+             <summary>
+             Rotina responsável por atualizar tarefas.
+             </summary>
+            
+              <param name="usuarioID">ID do Usuário</param>
+              <param name="tarefas">Model Tarefa</param>
+              
+             <returns>Model de Tarefas</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.Deletar(System.Int32)">
+             <summary>
+             Rotina responsável por deletar tarefa.
+             </summary>
+            
+              <param name="tarefaID">ID de Tarefa</param>
+              
+             <returns></returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.GetQuantidadeTarefasPorProjeto(System.Int32)">
+             <summary>
+             Rotina responsável por retornar quantidade de tarefas por projeto.
+             </summary>
+            
+              <param name="projetoID">ID do projeto</param>
+              
+             <returns>Quantidade de projetos</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.GetRelatorioDesempenho(System.Int32)">
+             <summary>
+             Rotina responsável por retornar relatório de desempenho do usuario.
+             </summary>
+            
+              <param name="usuarioID">ID do usuário</param>
+              
+             <returns>Lista de Desempenho</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Models.TarefasRepositorio.AdicionaCometariosTarefa(GestordeTarefasApi.Models.ComentarioTarefa)">
+             <summary>
+             Rotina responsável por adicionar um comentário na tarefa.
+             </summary>
+            
+              <param name="comentario">Model do ComentarioTarefa</param>
+              
+             <returns>Id a tabela ComentarioTarefa</returns>
+        </member>
+        <member name="T:GestordeTarefasApi.Util">
+            <summary>
+            Classe de Util.
+            </summary>
+        </member>
+        <member name="M:GestordeTarefasApi.Util.FormataSQL(System.String)">
+            <summary>
+            Rotina responsavel formatar string.
+            </summary>
+            
+             <param name="valor">String que sera formatada</param>
+             
+            <returns>string</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Util.DataValida(System.String)">
+            <summary>
+            Rotina responsavel por verificar se string no formato de data é valida.
+            </summary>
+            
+             <param name="data">String data</param>
+             
+            <returns>True/False</returns>
+        </member>
+        <member name="M:GestordeTarefasApi.Util.RemoveCaracteresEspeciais(System.String)">
+            <summary>
+            Rotina responsavel por remover caracteres especiais de string.
+            </summary>
+            
+             <param name="valor">String que sera formatada</param>
+             
+            <returns>Retorna string formatada</returns>
+        </member>
+    </members>
+</doc>
