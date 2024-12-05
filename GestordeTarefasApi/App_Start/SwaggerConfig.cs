@@ -33,7 +33,7 @@ namespace GestordeTarefasApi
                         // additional fields by chaining methods off SingleApiVersion.
                         //
                         c.SingleApiVersion("v1", "Gerenciar Tarefas e Projetos do Usuário")
-                        .Description(@"Bem vindo a API de Rematricula Toddle! Com ela você pode realizar a rematrícula de alunos para o próximo ano letivo.
+                        .Description(@"Bem vindo a API de Gerenciamento de Projetos! Com ela você pode realizar a gestã de projetos e tarefas de usuários.
 
 Nossa API suporta o formato: REST. O sistema deve realizar uma chamada para a URL enviando os parâmetros por meio de GET ou POST. O retorno para cada chamada será um JSON cujo formato é detalhado ao longo desta documentação."); ;
 
